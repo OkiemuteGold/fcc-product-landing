@@ -109,6 +109,10 @@ img {
     height: auto;
 }
 
+#header-img:hover {
+    cursor: pointer;
+}
+
 #nav-bar {
     display: flex;
     align-items: center;
