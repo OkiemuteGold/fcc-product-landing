@@ -1,3 +1,4 @@
+// update footer year
 let footerYear = document.getElementById("footer-year");
 let fullCopyrightYear;
 let date = new Date();
@@ -8,7 +9,7 @@ footerYear.innerHTML = fullCopyrightYear;
 let navbar = document.getElementById("nav-bar")
 let toggler = document.querySelector("#mobile-menu-toggler");
 
-
+// toggle navbar
 toggler.addEventListener("click", function () {
     navbar.classList.toggle("show-nav");
     this.classList.toggle("styled-toggler");
@@ -16,3 +17,13 @@ toggler.addEventListener("click", function () {
     //     this.classList.toggle("styled-toggler");
     // }, 300);
 })
+
+// Smooth nav link transition
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+});
